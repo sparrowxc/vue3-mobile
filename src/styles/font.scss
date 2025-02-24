@@ -1,0 +1,90 @@
+// 云杉字体 https://docs.qq.com/sheet/DTUxEdEt6WGtzU1JT
+$cdnURL: 'https://yunshan-cdn.oss-cn-hangzhou.aliyuncs.com/fonts/';
+$local: '../assets/fonts/';
+
+@mixin fontFamily($name, $prefix: $cdnURL, $type: '') {
+  font-family: $name;
+  font-display: swap;
+  @if ($type == 'ttf') {
+    src: url('#{$prefix}#{$name}.ttf') format('truetype');
+  } @else if ($type == 'woff') {
+    src: url('#{$prefix}#{$name}.woff') format('woff'), url('#{$prefix}#{$name}.ttf') format('truetype');
+  } @else {
+    src: url('#{$prefix}#{$name}.woff2') format('woff2'), url('#{$prefix}#{$name}.woff') format('woff'), url('#{$prefix}#{$name}.ttf') format('truetype');
+  }
+}
+
+// 思源黑体 变体
+@font-face {
+  @include fontFamily('SourceSansVF');
+}
+
+// 思源宋体 变体
+@font-face {
+  @include fontFamily('SourceSerifVF');
+}
+
+// 优设标题黑
+@font-face {
+  @include fontFamily('YouSheBiaoTiHei');
+}
+
+// 阿里妈妈数黑体
+@font-face {
+  @include fontFamily('AlimamaShuHeiTi');
+}
+
+// 斗鱼追光体
+@font-face {
+  @include fontFamily('DouYuFont');
+}
+
+// 钉钉进步体
+@font-face {
+  @include fontFamily('DingTalkJinBuTi');
+}
+
+// 腾讯体
+@font-face {
+  @include fontFamily('TencentSansW7');
+}
+
+// Tex Gyre 常规 (等宽数字)
+@font-face {
+  @include fontFamily('TexGyre');
+}
+
+// Tex Gyre 粗体 (等宽数字)
+@font-face {
+  @include fontFamily('TexGyreBold');
+}
+
+// LcdD 液晶体
+@font-face {
+  @include fontFamily('LcdD');
+}
+
+// Rajdhani 常规
+@font-face {
+  @include fontFamily('Rajdhani');
+}
+
+// Rajdhani 细
+@font-face {
+  @include fontFamily('Rajdhani-Light');
+}
+
+// Rajdhani Medium
+@font-face {
+  @include fontFamily('Rajdhani-Medium');
+}
+
+// Rajdhani SemiBold
+@font-face {
+  @include fontFamily('Rajdhani-SemiBold');
+}
+
+// Rajdhani Bold
+@font-face {
+  @include fontFamily('Rajdhani-Bold');
+}

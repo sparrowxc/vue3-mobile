@@ -1,0 +1,247 @@
+{
+  "npm.packageManager": "pnpm",
+  // Prettier
+  "prettier.printWidth": 180,
+  "prettier.semi": false,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.useTabs": false,
+  "prettier.vueIndentScriptAndStyle": false,
+  "prettier.withNodeModules": false,
+  // Editor
+  "editor.linkedEditing": true,
+  "editor.suggestSelection": "first",
+  "editor.guides.bracketPairs": "active",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.unicodeHighlight.allowedLocales": {
+    "zh-hans": true,
+    "zh-hant": true
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "never",
+    "source.fixAll.stylelint": "never",
+    "source.organizeImports": "never"
+  },
+  // Lint
+  "eslint.enable": false,
+  "eslint.experimental.useFlatConfig": true,
+  "eslint.rules.customizations": [
+    { "rule": "style/*", "severity": "off" },
+    { "rule": "*-indent", "severity": "off" },
+    { "rule": "*-spacing", "severity": "off" },
+    { "rule": "*-spaces", "severity": "off" },
+    { "rule": "*-order", "severity": "off" },
+    { "rule": "*-dangle", "severity": "off" },
+    { "rule": "*-newline", "severity": "off" },
+    { "rule": "*quotes", "severity": "off" },
+    { "rule": "*semi", "severity": "off" },
+    { "rule": "*-var", "severity": "off" },
+    { "rule": "*no-empty", "severity": "off" }
+  ],
+  // Enable eslint for all supported languages
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "html", "markdown", "json", "jsonc", "yaml"],
+  "css.validate": false,
+  "css.lint.unknownAtRules": "ignore",
+  "scss.validate": false,
+  "scss.lint.unknownAtRules": "ignore",
+  "stylelint.validate": ["css", "less", "scss", "sass", "html", "vue", "postcss"],
+  // Vue
+  "vue.autoInsert.dotValue": true,
+  // Explorer
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.compactFolders": false,
+  "explorer.fileNesting.patterns": {
+    ".env": ".env.*",
+    "vite.config.*": "!*.env, !.env.*, .babelrc*, jsconfig.*, postcss.config.*, svgo.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*,"
+  },
+  // Files
+  "files.eol": "\n",
+  "files.associations": {
+    "pages.json": "jsonc",
+    "manifest.json": "jsonc",
+    "*.env.*": "dotenv"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.eslintignore": true,
+    "**/.eslintcache": true,
+    "**/.stylelintignore": true,
+    "**/.stylelintcache": true,
+    "**/*.gitkeep": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.vscode/**": true,
+    "**/.idea/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/bower_components/**": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/yarn.lock": true,
+    "**/pnpm-lock.yaml": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/*.log": true,
+    "**/*.log*": true,
+    "**/bower_components": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/elehukouben": true,
+    "**/.git": true,
+    "**/.gitignore": true,
+    "**/.svn": true,
+    "**/.DS_Store": true,
+    "**/.idea": true,
+    "**/.vscode": false,
+    "**/yarn.lock": true,
+    "**/pnpm-lock.yaml": true,
+    "**/tmp": true,
+    "**/.gitkeep": true,
+    "out": true,
+    "dist": true,
+    "configs": true,
+    "build": true,
+    "node_modules": true,
+    "CHANGELOG.md": true,
+    "examples": true,
+    "res": true,
+    "screenshots": true,
+    "yarn-error.log": true,
+    "**/.yarn": true
+  },
+  // Terminal
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontWeight": "300",
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  // Workbench
+  "workbench.list.smoothScrolling": true,
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.tabCloseButton": "left",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.limit.value": 10,
+  "workbench.sideBar.location": "left",
+  "workbench.tree.expandMode": "singleClick",
+  "workbench.tree.indent": 16,
+  // Better-comments
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00"
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB"
+    },
+    {
+      "tag": "*",
+      "color": "#98C379"
+    },
+    {
+      "tag": "^",
+      "color": "#7c3aed"
+    },
+    {
+      "tag": "$",
+      "color": "#2563eb"
+    },
+    {
+      "tag": "//",
+      "color": "#474747"
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00"
+    }
+  ],
+  "cSpell.words": [
+    "Alimama",
+    "alova",
+    "antdv",
+    "antfu",
+    "attributify",
+    "automator",
+    "bbox",
+    "Biao",
+    "Boxplot",
+    "brotli",
+    "browserslist",
+    "ckfinder",
+    "commitlint",
+    "countup",
+    "datepicker",
+    "dcloudio",
+    "demi",
+    "dingtao",
+    "Echart",
+    "echarts",
+    "esbuild",
+    "esnext",
+    "esno",
+    "fileupload",
+    "iconify",
+    "inrange",
+    "INTLIFY",
+    "liquidfill",
+    "micromessenger",
+    "minipic",
+    "mockjs",
+    "nprogress",
+    "overscan",
+    "peergrade",
+    "persistedstate",
+    "picocolors",
+    "pinia",
+    "pnpm",
+    "postbuild",
+    "preinstall",
+    "qianjiang",
+    "qrcode",
+    "Rajdhani",
+    "Rajdhanil",
+    "realname",
+    "sider",
+    "stacktracey",
+    "styl",
+    "stylelint",
+    "taurusapp",
+    "Treemap",
+    "uniapp",
+    "unocss",
+    "unplugin",
+    "unref",
+    "userinfo",
+    "vant",
+    "vite",
+    "vitejs",
+    "vueuse",
+    "Wechat",
+    "weixin",
+    "wordcloud",
+    "xieqiao",
+    "xjpfzsxwz",
+    "zxcvbn"
+  ],
+  "workbench.editor.tabActionLocation": "left"
+}

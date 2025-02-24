@@ -1,0 +1,96 @@
+{
+  "export-all": {
+    "scope": "javascript,typescript",
+    "prefix": "exAll",
+    "body": ["export * from '$2';"],
+    "description": "Export a module"
+  },
+  "comments-group": {
+    "prefix": "gg//",
+    "body": [
+      "// * --------------------------------------------------------- ${1:模块名称} 开始 ---------------------------------------------------------",
+      "$0",
+      "// * --------------------------------------------------------- ${1:模块名称} 结束 ---------------------------------------------------------"
+    ],
+    "description": "注释 分组"
+  },
+  "vue-computed": {
+    "scope": "javascript,vue",
+    "prefix": "com",
+    "body": ["computed(() => {$1})"]
+  },
+  "vue-watch": {
+    "scope": "javascript,vue",
+    "prefix": "wat",
+    "body": ["watch(", "  () => ${1:data},", "  (newV) => {$2}", ")"]
+  },
+  "vue-base-page": {
+    "scope": "vue",
+    "prefix": "vueBase",
+    "body": [
+      "",
+      "<template>",
+      "  <div class=\"page\">$0</div>",
+      "</template>",
+      "",
+      "<script setup>",
+      "defineOptions({",
+      "  name: '$1',",
+      "})",
+      "</script>",
+      "",
+      "<style scoped lang=\"scss\"></style>",
+      ""
+    ],
+    "description": "vue3页面代码段"
+  },
+  "vue-component": {
+    "scope": "vue,component",
+    "prefix": "vueComponent",
+    "body": [
+      "<template>",
+      "  <div>$2</div>",
+      "</template>",
+      "",
+      "<script setup>",
+      "/** props 组件参数 */",
+      "const props = defineProps({",
+      "  ${1:data}: {",
+      "    type: Array,",
+      "    default: () => []",
+      "  }",
+      "})",
+      "",
+      "</script>",
+      "",
+      "<style scoped lang=\"scss\"></style>",
+      ""
+    ],
+    "description": "vue3页面代码段"
+  },
+  "api-get": {
+    "prefix": "apiGet",
+    "body": ["/** ${2:注释} */", "get${0:Data}: (data) => Get('${1:url}', data, {})"],
+    "description": "api Get 请求"
+  },
+  "api-post": {
+    "prefix": "apiPost",
+    "body": ["/** ${2:注释} */", "post${0:Data}: (data) => Post('${1:url}', data, {})"],
+    "description": "api Post 请求"
+  },
+  "api-post-params": {
+    "prefix": "apiPostParms",
+    "body": ["/** ${2:注释} */", "post${0:Data}: (data) => PostByParams('${1:url}', data, {})"],
+    "description": "api Post 请求"
+  },
+  "api-put": {
+    "prefix": "apiPut",
+    "body": ["/** ${2:注释} */", "put${0:Data}: (data) => Put('${1:url}', data, {})"],
+    "description": "api Put 请求"
+  },
+  "api-delete": {
+    "prefix": "apiDelete",
+    "body": ["/** ${2:注释} */", "del${0:Data}: (data) => Del('${1:url}', data, {})"],
+    "description": "api Delete 请求"
+  }
+}
